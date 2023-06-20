@@ -78,11 +78,11 @@ What this means is that it's up to the file browser to gracefully handle this un
 - Very fast, although work is being done to [make it faster](https://gitlab.xfce.org/xfce/tumbler/-/issues/1).
 - Loads large directories well.
 - Uses the default icon when loading thumbnails, so directories will use the folder icon while they load.
-- No infinite loading bug, and no visual indicator that the thumbnail is being regenerated, possibly because it uses the existing one instead of `image-loading.svg`.
+- No infinite loading bug, and no visual indicator that the thumbnail is being regenerated, possibly because it uses the existing folder icon instead of `image-loading.svg`.
 
 Cons of using thunar:
 
-- Thumbnails aren't generated until you scroll to them, which means you can't open a large directory and have all thumbnails be automatically generated.
+- Thumbnails aren't generated until you scroll to them, which means that you can't open a large directory and have all thumbnails be automatically generated.
 - Thumbnail sizes for non-directories may be less polished than Nautilus.
 
 When using thunar, make sure you have the [tumbler](https://gitlab.xfce.org/xfce/tumbler) package installed. [Source](https://superuser.com/questions/258633/why-is-thunar-not-creating-and-showing-thumbnails-of-images/259471#259471).
