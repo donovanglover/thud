@@ -6,27 +6,43 @@ A cover thumbnailer written in Go for performance and reliability.
 
 Tested and works in: [Caja](https://github.com/mate-desktop/caja), [Nemo](https://github.com/linuxmint/nemo), [Thunar](https://github.com/xfce-mirror/thunar), [Nautilus](https://github.com/GNOME/nautilus).
 
-## Installation
+## Usage (NixOS)
 
-Run `make install` to create an installable package from the PKGBUILD and install it.
+Step 1. Add my personal nixpkgs branch to your flake inputs.
 
-```fish
-git clone https://github.com/donovanglover/go-thumbnailer
-cd go-thumbnailer && make install
+```nix
+{
+  inputs = {
+    nixpkgs.url = "github:donovanglover/nixpkgs/personal-unstable";
+  }
+}
 ```
 
-The source code is short and simple so it's easy to verify. Manual installation is possible but not recommended.
+Step 2. Add `go-thumbnailer` to your `systemPackages`.
 
-## Installing manually
+```nix
+{ pkgs, ... }:
+
+{
+  environment.systemPackages = with pkgs; [
+    go-thumbnailer
+  ];
+}
+```
+
+Step 3. Rebuild your system (usually with `nixos-rebuild switch --flake .`).
+
+## Other distributions
 
 First install the dependency [libvips](https://github.com/libvips/libvips) and build the binary with `go build`. Then, copy the executable and thumbnailer to your /usr directory, like so:
 
 ```fish
+git clone https://github.com/donovanglover/go-thumbnailer
+cd go-thumbnailer && go build -o go-thumbnailer
+
 sudo install -Dm755 go-thumbnailer /usr/bin/go-thumbnailer
 sudo install -Dm644 go.thumbnailer /usr/share/thumbnailers/go.thumbnailer
 ```
-
-If you're using a non-Arch distribution, feel free to [create your own package](https://wiki.archlinux.org/title/Creating_packages_for_other_distributions) for go-thumbnailer.
 
 ## Purpose
 
