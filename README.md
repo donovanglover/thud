@@ -119,4 +119,4 @@ For ease of access, here's a summary of above.
 | **Nautilus** | :white_check_mark: | After first load (Nautilus 43+) | :x: | Nautilus 43+ |
 | **Nemo** | :x: | :x: | :x: | :x: |
 
-Recommendation: Use Nautilus since it has the best UI/UX by far and continues to improve over time. Make sure that you don't use the default GNOME thumbnailers since they are unable to handle certain files like H265.
+Recommendation: Thunar offers a pleasurable experience. It is very fast, there is no cascading effect, and covers are automatically updated as you change them. Nautilus also works, but you will have to manually delete old thumbnails to update them.
