@@ -97,9 +97,9 @@ When using thunar, make sure you have the [tumbler](https://gitlab.xfce.org/xfce
 ### Nautilus
 
 - Fast, but thumbnail generation was intentionally slowed down based on the source code. See [lines 82-84](https://gitlab.gnome.org/GNOME/nautilus/-/blob/794931998cb27b7ca94651c72300a5ed167a8951/src/nautilus-thumbnails.c#L82-84) and [147-171](https://gitlab.gnome.org/GNOME/nautilus/-/blob/794931998cb27b7ca94651c72300a5ed167a8951/src/nautilus-thumbnails.c#L147-171) of `nautilus-thumbnails.c`. The issue [has been discussed](https://gitlab.gnome.org/GNOME/nautilus/-/issues/856) and [several](https://gitlab.gnome.org/GNOME/nautilus/-/merge_requests/660) [solutions](https://gitlab.gnome.org/GNOME/nautilus/-/merge_requests/700) have been proposed.
-- Has a cascading effect when loading large directories. See: [Gnome Files is unusable with big folders](https://gitlab.gnome.org/GNOME/nautilus/-/issues/1967) and [Folder contents scroll down as thumbnails are generated in icon view](https://gitlab.gnome.org/GNOME/nautilus/-/issues/1720).
+- ~~Has a cascading effect when loading large directories. See: [Gnome Files is unusable with big folders](https://gitlab.gnome.org/GNOME/nautilus/-/issues/1967) and [Folder contents scroll down as thumbnails are generated in icon view](https://gitlab.gnome.org/GNOME/nautilus/-/issues/1720).~~ **[Fixed in Nautilus 43](https://gitlab.gnome.org/GNOME/nautilus/-/issues/1720#note_1483977)**.
 - Uses `image-loading.svg` while directory thumbnail loads.
-- Has infinite loading bug after changing the file structure of the current directory and moving up one directory. A [known issue](https://gitlab.gnome.org/GNOME/nautilus/-/issues/1887) since June 2021.
+- ~~Has infinite loading bug after changing the file structure of the current directory and moving up one directory. A [known issue](https://gitlab.gnome.org/GNOME/nautilus/-/issues/1887) since June 2021.~~ **Seems to be fixed in Nautilus 43, however directory thumbnails do not automatically update like Thunar**.
 
 ### Nemo
 
@@ -116,7 +116,7 @@ For ease of access, here's a summary of above.
 | --- | :---: | :---: | :---: | :---: |
 | **Thunar** | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | **Caja** | :white_check_mark: | After first load | :x: | :white_check_mark: |
-| **Nautilus** | :white_check_mark: | :x: | :x: | :x: |
+| **Nautilus** | :white_check_mark: | After first load (Nautilus 43+) | :x: | Nautilus 43+ |
 | **Nemo** | :x: | :x: | :x: | :x: |
 
-Recommendation: Use Nautilus and deal with the infinite loading bug.
+Recommendation: Use Nautilus since it has the best UI/UX by far and continues to improve over time. Make sure that you don't use the default GNOME thumbnailers since they are unable to handle certain files like H265.
