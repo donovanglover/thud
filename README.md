@@ -14,7 +14,7 @@ Step 1. Add my personal nixpkgs branch to your flake inputs.
 {
   inputs = {
     nixpkgs.url = "github:donovanglover/nixpkgs/personal-unstable";
-  }
+  };
 }
 ```
 
