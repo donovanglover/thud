@@ -8,17 +8,7 @@ Tested and works in: [Caja](https://github.com/mate-desktop/caja), [Nemo](https:
 
 ## Usage (NixOS)
 
-Step 1. Add my personal nixpkgs branch to your flake inputs.
-
-```nix
-{
-  inputs = {
-    nixpkgs.url = "github:donovanglover/nixpkgs/personal-unstable";
-  };
-}
-```
-
-Step 2. Add `go-thumbnailer` to your `systemPackages`.
+Add [`go-thumbnailer`](https://search.nixos.org/packages?channel=unstable&query=go-thumbnailer) to your `systemPackages` and rebuild.
 
 ```nix
 { pkgs, ... }:
@@ -30,7 +20,7 @@ Step 2. Add `go-thumbnailer` to your `systemPackages`.
 }
 ```
 
-Step 3. Rebuild your system (usually with `nixos-rebuild switch --flake .`).
+That's it! Directories with `cover.jpg` or `cover.png` will now automatically generate cover images.
 
 ## Other distributions
 
