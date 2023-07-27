@@ -1,6 +1,6 @@
 # go-thumbnailer
 
-A cover thumbnailer written in Go for performance and reliability.
+Generate directory thumbnails from images inside them.
 
 ![Screenshot of go-thumbnailer changing folder icons to cover images in nautilus.](example.png)
 
