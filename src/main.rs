@@ -1,5 +1,4 @@
 use libvips::{ops, VipsImage, VipsApp};
-use libvips::ops::Interesting;
 
 fn main() {
     let app = VipsApp::new("Test Libvips", false).expect("Cannot initialize libvips");
@@ -8,10 +7,10 @@ fn main() {
 
     let image = VipsImage::new_from_file("cover.png").unwrap();
 
-    let options = ops::ThumbnailImageOptions {
-        crop: Interesting::Centre,
-        ..ops::ThumbnailImageOptions::default()
-    };
+    let thumbnail = ops::thumbnail_image(&image, 512).unwrap();
 
-    ops::thumbnail_image_with_opts(&image, 128, &options).unwrap();
+    match ops::vipssave(&thumbnail, "output.png") {
+        Err(_) => println!("error: {}", app.error_buffer().unwrap()),
+        Ok(_) => println!("Great Success!")
+    }
 }

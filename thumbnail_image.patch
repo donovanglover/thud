@@ -1,0 +1,19 @@
+diff --git a/libvips/src/ops.rs b/libvips/src/ops.rs
+index b803f2e..afb1578 100644
+--- a/libvips/src/ops.rs
++++ b/libvips/src/ops.rs
+@@ -17519,7 +17519,13 @@ pub fn thumbnail_image(inp: &VipsImage, width: i32) -> Result<VipsImage> {
+         let width_in: i32 = width;
+         let mut out_out: *mut bindings::VipsImage = null_mut();
+ 
+-        let vips_op_response = bindings::vips_thumbnail_image(inp_in, &mut out_out, width_in, NULL);
++        let height_in: i32 = 512;
++        let height_in_name = utils::new_c_string("height")?;
++
++        let crop_in: i32 = Interesting::Centre as i32;
++        let crop_in_name = utils::new_c_string("crop")?;
++
++        let vips_op_response = bindings::vips_thumbnail_image(inp_in, &mut out_out, width_in, height_in_name.as_ptr(), height_in, crop_in_name.as_ptr(), crop_in, NULL);
+         utils::result(
+             vips_op_response,
+             VipsImage { ctx: out_out },
