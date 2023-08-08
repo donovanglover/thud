@@ -4,7 +4,7 @@
 
 thud can be customized with *strategies* that reside in `~/.config/thud/config.toml`. By default, it creates thumbnails from `cover.{png,jpg}` files.
 
-![Screenshot of go-thumbnailer changing folder icons to cover images in nautilus.](example.png)
+![Screenshot of go-thumbnailer changing folder icons to cover images in nautilus.](./cover.png)
 
 Tested and works in: [Caja](https://github.com/mate-desktop/caja), [Nemo](https://github.com/linuxmint/nemo), [Thunar](https://github.com/xfce-mirror/thunar), [Nautilus](https://github.com/GNOME/nautilus).
 
