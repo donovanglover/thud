@@ -2,17 +2,14 @@ use clap::Parser;
 use std::path::PathBuf;
 
 const LONG_ABOUT: &str = "
-*thud* is a thumbnailer that generates thumbnails for directories.
-It was originally called go-thumbnailer and written in Go, but later
-renamed to thud (for (thu)mbnail (d)irectories) and rewritten in Rust.
+thud is a thumbnailer that generates thumbnails for directories.
+thud stands for (thu)mbnail (d)irectories. It is written in Rust
+with no external library dependencies.
 
-go-thumbnailer focused on doing one thing and doing it well: cover thumbnails.
-thud adds additional functionality such as being able to customize which images
-get thumbnailed, as well as how many images can be in a thumbnail.
-
-Unlike go-thumbnailer, thud requires no external libraries to run. libvips
-is no longer necessary and it's possible to enjoy the benefits of thud with
-a single binary.
+thud can optionally be configured with a ~/.config/thud/config.toml.
+By default, thud will create directory thumbnails for all directories based
+on the files inside them. You can configure how thud creates thumbnails
+with strategies.
 ";
 
 #[derive(Parser)]
