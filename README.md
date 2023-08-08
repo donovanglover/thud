@@ -1,6 +1,8 @@
-# go-thumbnailer
+# thud
 
-Generate directory thumbnails from images inside them.
+*thud*, short for **thu**mbnail **d**irectories, is a tool that lets you generate directory thumbnails from images inside them.
+
+thud can be customized with *strategies* that reside in `~/.config/thud/config.toml`. By default, it creates thumbnails from `cover.{png,jpg}` files.
 
 ![Screenshot of go-thumbnailer changing folder icons to cover images in nautilus.](example.png)
 
@@ -33,6 +35,12 @@ cd go-thumbnailer && go build -o go-thumbnailer
 sudo install -Dm755 go-thumbnailer /usr/bin/go-thumbnailer
 sudo install -Dm644 go.thumbnailer /usr/share/thumbnailers/go.thumbnailer
 ```
+
+## Strategies
+
+You can change the strategy that thud uses to create thumbnails.
+
+By default, it looks for `cover.{jpg,png}`.
 
 ## Purpose
 
