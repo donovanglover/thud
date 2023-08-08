@@ -1,0 +1,3 @@
+[Thumbnailer Entry]
+Exec=thud --size %s --input-directory %i --output-file %o
+MimeType=inode/directory

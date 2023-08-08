@@ -4,7 +4,7 @@
 
   outputs = { self, nixpkgs }: with nixpkgs.legacyPackages.x86_64-linux; {
     packages.x86_64-linux.default = buildGoModule {
-      name = "go-thumbnailer";
+      name = "thud";
       src = ./.;
 
       buildInputs = with pkgs; [ vips ];
@@ -14,7 +14,7 @@
 
       postInstall = ''
         mkdir -p $out/share/thumbnailers
-        substituteAll ${./go.thumbnailer} $out/share/thumbnailers/go.thumbnailer
+        substituteAll ${./thud.thumbnailer} $out/share/thumbnailers/thud.thumbnailer
       '';
     };
 

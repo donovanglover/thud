@@ -1,9 +1,9 @@
 [package]
-name = "go-thumbnailer"
+name = "thud"
 description = "Generate directory thumbnails from images inside them."
 version = "0.1.0"
 authors = ["Copyright (C) 2022-2023 Donovan Glover <https://donovan.is/>"]
-repository = "https://github.com/donovanglover/go-thumbnailer"
+repository = "https://github.com/donovanglover/thud"
 license = "MIT"
 edition = "2021"
 

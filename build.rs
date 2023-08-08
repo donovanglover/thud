@@ -6,7 +6,7 @@ use clap_complete::generate_to;
 use clap_complete::Shell::{Bash, Fish, Zsh};
 use clap_mangen::Man;
 
-static NAME: &str = "go-thumbnailer";
+static NAME: &str = "thud";
 
 fn generate_man_pages(cmd: Command) {
     let man_dir = std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("man");
