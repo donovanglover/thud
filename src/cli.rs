@@ -3,7 +3,7 @@ use std::path::PathBuf;
 
 const LONG_ABOUT: &str = "
 thud is a thumbnailer that generates thumbnails for directories.
-thud stands for (thu)mbnail (d)irectories. It is written in Rust
+thud stands for (thu)mbnail (d)irectory. It is written in Rust
 with no external library dependencies.
 
 thud can optionally be configured with a ~/.config/thud/config.toml.
