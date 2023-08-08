@@ -1,4 +1,5 @@
 use clap::Parser;
+use std::path::PathBuf;
 
 const LONG_ABOUT: &str = "
 *thud* is a thumbnailer that generates thumbnails for directories.
@@ -21,8 +22,8 @@ pub struct Cli {
     pub size: u32,
 
     #[arg(short, long)]
-    pub input_directory: String,
+    pub input_directory: PathBuf,
 
     #[arg(short, long)]
-    pub output_file: String,
+    pub output_file: PathBuf,
 }
