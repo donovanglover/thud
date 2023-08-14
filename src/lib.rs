@@ -4,11 +4,11 @@ use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
 pub struct Config {
-    rules: Option<Vec<Rules>>,
+    rules: Option<Vec<Rule>>,
 }
 
 #[derive(Debug, Deserialize)]
-pub struct Rules {
+pub struct Rule {
     path: String,
     strategy: String,
     files: Option<Vec<String>>,
