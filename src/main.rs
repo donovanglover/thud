@@ -31,6 +31,8 @@ fn main() {
                                 &_ => log("warning: invalid strategy, skipping"),
                             }
                         }
+
+                        return
                     }
                 }
             }
