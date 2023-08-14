@@ -11,7 +11,7 @@ struct Config {
 pub struct Rules {
     path: String,
     strategy: String,
-    files: Vec<String>,
+    files: Option<Vec<String>>,
 }
 
 pub fn get_config(file: &Path) -> Option<Vec<Rules>> {
