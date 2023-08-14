@@ -26,4 +26,8 @@ pub struct Cli {
     /// Where to save the output image
     #[arg(short, long)]
     pub output_file: PathBuf,
+
+    /// Print what thud is doing
+    #[arg(short, long, default_value_t = false)]
+    pub verbose: bool,
 }

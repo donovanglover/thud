@@ -1,8 +1,12 @@
+use clap::Parser;
+use cli::Cli;
 use std::env::var;
 use std::fs;
 use std::path::Path;
 use serde::Deserialize;
 use image::imageops::FilterType;
+
+mod cli;
 
 /// Struct for config.toml
 #[derive(Debug, Deserialize)]
@@ -56,5 +60,14 @@ pub fn get_filter(filter: &str) -> FilterType {
         "gaussian" => FilterType::Gaussian,
         "lanczos3" => FilterType::Lanczos3,
         &_ => FilterType::Lanczos3,
+    }
+}
+
+/// Helper log function when --verbose is used
+pub fn log(text: &str) {
+    let Cli { verbose, .. } = Cli::parse();
+
+    if verbose {
+        println!("{text}")
     }
 }
