@@ -39,3 +39,7 @@ sudo install -Dm644 ./assets/thud.thumbnailer /usr/share/thumbnailers/thud.thumb
 ## Usage
 
 thud should work out of the box. Read the man pages for how to customize thud with `~/.config/thud/config.toml`.
+
+## Contributing
+
+Anyone can add their own strategies to thud by forking the repository and making a pull request.
