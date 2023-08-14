@@ -21,7 +21,7 @@ fn main() {
                             let filter = rule.filter.unwrap_or("lanczos3".to_string());
 
                             match rule.strategy.as_str() {
-                                "cover" => strategy::cover(files, get_filter(&filter)),
+                                "cover" => strategy::cover(input_directory_str.to_owned(), files, get_filter(&filter)),
 
                                 &_ => log("warning: invalid strategy, skipping"),
                             }
