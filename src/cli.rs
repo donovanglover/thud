@@ -15,12 +15,15 @@ with strategies.
 #[derive(Parser)]
 #[command(author, version, about, long_about = LONG_ABOUT)]
 pub struct Cli {
+    /// Size of the thumbnail to output
     #[arg(short, long, default_value_t = 128)]
     pub size: u32,
 
+    /// Directory to base the thumbnail off of
     #[arg(short, long)]
     pub input_directory: PathBuf,
 
+    /// Where to save the output image
     #[arg(short, long)]
     pub output_file: PathBuf,
 }
