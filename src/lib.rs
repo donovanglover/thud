@@ -1,3 +1,4 @@
+use std::env::var;
 use std::fs;
 use std::path::Path;
 use serde::Deserialize;
@@ -15,7 +16,7 @@ pub struct Rule {
     pub filter: Option<String>,
 }
 
-pub fn get_config(file: String) -> Option<Config> {
+pub fn get_config(file: &str) -> Option<Config> {
     let file = Path::new(&file);
 
     if let Ok(config) = fs::read_to_string(file) {
@@ -23,4 +24,10 @@ pub fn get_config(file: String) -> Option<Config> {
     }
 
     None
+}
+
+pub fn get_home_config() -> Option<Config> {
+    let config = var("HOME").unwrap() + "/.config/thud/config.toml";
+
+    get_config(config.as_str())
 }
