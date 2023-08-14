@@ -12,5 +12,5 @@ fn get_config_returns_none_if_invalid_toml() {
 
 #[test]
 fn get_config_returns_config() {
-    dbg!(thud::get_config("./examples/config.toml").is_some(), "get_config() returns a config if the file exists and is valid");
+    assert!(thud::get_config("./examples/config.toml").is_some(), "get_config() returns a config if the file exists and is valid");
 }
