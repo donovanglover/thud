@@ -15,12 +15,12 @@ _thud() {
 
     local context curcontext="$curcontext" state line
     _arguments "${_arguments_options[@]}" \
-'-s+[]:SIZE: ' \
-'--size=[]:SIZE: ' \
-'-i+[]:INPUT_DIRECTORY:_files' \
-'--input-directory=[]:INPUT_DIRECTORY:_files' \
-'-o+[]:OUTPUT_FILE:_files' \
-'--output-file=[]:OUTPUT_FILE:_files' \
+'-s+[Size of the thumbnail to output]:SIZE: ' \
+'--size=[Size of the thumbnail to output]:SIZE: ' \
+'-i+[Directory to base the thumbnail off of]:INPUT_DIRECTORY:_files' \
+'--input-directory=[Directory to base the thumbnail off of]:INPUT_DIRECTORY:_files' \
+'-o+[Where to save the output image]:OUTPUT_FILE:_files' \
+'--output-file=[Where to save the output image]:OUTPUT_FILE:_files' \
 '-h[Print help (see more with '\''--help'\'')]' \
 '--help[Print help (see more with '\''--help'\'')]' \
 '-V[Print version]' \
