@@ -1,10 +1,10 @@
 use clap::Parser;
 use cli::Cli;
+use image::imageops::FilterType;
+use serde::Deserialize;
 use std::env::var;
 use std::fs;
 use std::path::Path;
-use serde::Deserialize;
-use image::imageops::FilterType;
 
 mod cli;
 
@@ -31,7 +31,7 @@ pub fn get_config(file: &str) -> Option<Config> {
 
     if let Ok(config) = fs::read_to_string(file) {
         if let Ok(toml) = toml::from_str(config.as_str()) {
-            return toml
+            return toml;
         }
     }
 

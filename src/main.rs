@@ -1,7 +1,7 @@
 use clap::Parser;
 use cli::Cli;
-use thud::get_home_config;
 use thud::get_filter;
+use thud::get_home_config;
 use thud::log;
 
 mod cli;
@@ -32,7 +32,7 @@ fn main() {
                 }
             }
 
-            return
+            return;
         }
 
         log("INFO: Using default cover.{png,jpg}");
