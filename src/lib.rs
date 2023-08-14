@@ -29,7 +29,11 @@ pub fn get_config(file: &str) -> Option<Config> {
 }
 
 pub fn get_home_config() -> Option<Config> {
-    let config = var("HOME").unwrap() + "/.config/thud/config.toml";
+    if let Ok(home) = var("HOME") {
+        let config = home + "/.config/thud/config.toml";
 
-    get_config(config.as_str())
+        return get_config(config.as_str());
+    }
+
+    None
 }
