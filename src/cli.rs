@@ -7,9 +7,15 @@ thud stands for (thu)mbnail (d)irectory. It is written in Rust
 with no external library dependencies.
 
 thud can optionally be configured with a ~/.config/thud/config.toml.
-By default, thud will create directory thumbnails for all directories based
-on the files inside them. You can configure how thud creates thumbnails
-with strategies.
+By default, thud will create directory thumbnails for all directories
+that have a cover.{png,jpg}. You can configure how thud creates
+thumbnails with strategies.
+
+For an example config file, see:
+https://github.com/donovanglover/thud/blob/master/examples/config.toml
+
+For a list of available strategies, see:
+https://github.com/donovanglover/thud/blob/master/src/strategy.rs
 ";
 
 #[derive(Parser)]
