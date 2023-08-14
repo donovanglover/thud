@@ -11,6 +11,8 @@ fn main() {
     #[rustfmt::skip]
     let Cli { input_directory, .. } = Cli::parse();
 
+    let default_files = vec!["cover.png".to_string(), "cover.jpg".to_string()];
+
     if let Some(input_directory_str) = input_directory.to_str() {
         if let Some(config) = get_home_config() {
             log("INFO: Using ~/.config/thud/config.toml");
@@ -21,15 +23,14 @@ fn main() {
                         #[rustfmt::skip]
                         log(&("RULES: Assigned ".to_owned() + input_directory_str + "/ to " + &rule.path));
 
-                        if let Some(files) = rule.files {
-                            let filter = rule.filter.unwrap_or("lanczos3".to_string());
+                        let filter = rule.filter.unwrap_or("lanczos3".to_string());
+                        let files = rule.files.unwrap_or(default_files);
 
-                            match rule.strategy.as_str() {
-                                #[rustfmt::skip]
-                                "cover" => strategy::cover(input_directory_str.to_owned(), files, get_filter(&filter)),
+                        match rule.strategy.as_str() {
+                            #[rustfmt::skip]
+                            "cover" => strategy::cover(input_directory_str.to_owned(), files, get_filter(&filter)),
 
-                                &_ => log("warning: invalid strategy, skipping"),
-                            }
+                            &_ => log("warning: invalid strategy, skipping"),
                         }
 
                         return
@@ -43,6 +44,6 @@ fn main() {
         log("INFO: Using default cover.{png,jpg}");
 
         #[rustfmt::skip]
-        strategy::cover(input_directory_str.to_owned(), vec!["cover.png".to_string(), "cover.jpg".to_string()], get_filter("lanczos3"));
+        strategy::cover(input_directory_str.to_owned(), default_files, get_filter("lanczos3"));
     }
 }
