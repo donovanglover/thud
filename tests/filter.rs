@@ -3,7 +3,7 @@ use image::imageops::FilterType;
 
 #[test]
 fn get_filter_returns_default_filter() {
-    assert_eq!(get_filter("this-filter-dns"), FilterType::Lanczos3, "get_filter() returns default filter as Lanczos3");
+    assert_eq!(get_filter("this-filter-dne"), FilterType::Lanczos3, "get_filter() returns default filter as Lanczos3");
 }
 
 #[test]
