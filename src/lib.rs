@@ -20,7 +20,9 @@ pub fn get_config(file: &str) -> Option<Config> {
     let file = Path::new(&file);
 
     if let Ok(config) = fs::read_to_string(file) {
-        return toml::from_str(config.as_str()).unwrap();
+        if let Ok(toml) = toml::from_str(config.as_str()) {
+            return toml
+        }
     }
 
     None
