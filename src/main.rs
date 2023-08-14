@@ -12,6 +12,8 @@ fn main() {
 
     if let Some(input_directory_str) = input_directory.to_str() {
         if let Some(config) = get_home_config() {
+            log("info: using ~/.config/thud/config.toml");
+
             if let Some(rules) = config.rules {
                 for rule in rules {
                     if input_directory.starts_with(rule.path) {
@@ -26,15 +28,12 @@ fn main() {
                         }
                     }
                 }
-
-                log("info: ~/.config/thud/config.toml was found, so those rules were used");
-                return
             }
 
-            log("info: ~/.config/thud/config.toml was found, but no rules were given")
+            return
         }
 
-        log("info: ~/.config/thud/config.toml not found or no rules were given");
+        log("info: using default cover.{png,jpg}");
 
         strategy::cover(input_directory_str.to_owned(), vec!["cover.png".to_string(), "cover.jpg".to_string()], get_filter("lanczos3"));
     }
