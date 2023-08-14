@@ -3,7 +3,7 @@ use std::path::Path;
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
-struct Config {
+pub struct Config {
     rules: Option<Vec<Rules>>,
 }
 
@@ -15,8 +15,8 @@ pub struct Rules {
     filter: Option<String>,
 }
 
-pub fn get_config(file: &Path) -> Option<Vec<Rules>> {
+pub fn get_config(file: &Path) -> Config {
     let config = fs::read_to_string(file).unwrap();
-    let decoded: Config = toml::from_str(config.as_str()).unwrap();
-    decoded.rules
+
+    toml::from_str(config.as_str()).unwrap()
 }
