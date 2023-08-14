@@ -15,10 +15,12 @@ pub struct Rules {
     filter: Option<String>,
 }
 
-pub fn get_config(file: &Path) -> Option<Config> {
+pub fn get_config(file: String) -> Option<Config> {
+    let file = Path::new(&file);
+
     if let Ok(config) = fs::read_to_string(file) {
-        toml::from_str(config.as_str()).unwrap()
-    } else {
-        None
+        return toml::from_str(config.as_str()).unwrap();
     }
+
+    None
 }
