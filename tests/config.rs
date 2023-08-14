@@ -7,7 +7,7 @@ fn get_config_returns_none_if_file_dne() {
 
 #[test]
 fn get_config_returns_none_if_invalid_toml() {
-    assert!(get_config("./examples/invalid.toml").is_none(), "get_config() returns None if the file does not exist");
+    assert!(get_config("./examples/invalid.toml").is_none(), "get_config() returns None if the toml is invalid");
 }
 
 #[test]
