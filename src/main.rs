@@ -1,7 +1,7 @@
 use clap::Parser;
 use cli::Cli;
-use image::*;
-use imageops::FilterType;
+use image::DynamicImage;
+use image::imageops::FilterType;
 
 mod cli;
 
