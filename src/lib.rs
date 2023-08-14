@@ -4,15 +4,15 @@ use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
 pub struct Config {
-    rules: Option<Vec<Rule>>,
+    pub rules: Option<Vec<Rule>>,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct Rule {
-    path: String,
-    strategy: String,
-    files: Option<Vec<String>>,
-    filter: Option<String>,
+    pub path: String,
+    pub strategy: String,
+    pub files: Option<Vec<String>>,
+    pub filter: Option<String>,
 }
 
 pub fn get_config(file: String) -> Option<Config> {
