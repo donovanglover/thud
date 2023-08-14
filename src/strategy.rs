@@ -1,8 +1,8 @@
-use clap::Parser;
-use image::DynamicImage;
-use image::imageops::FilterType;
 use crate::cli::Cli;
 use crate::log;
+use clap::Parser;
+use image::imageops::FilterType;
+use image::DynamicImage;
 
 pub fn cover(input_directory: String, files: Vec<String>, filter: FilterType) {
     #[rustfmt::skip]
@@ -17,7 +17,7 @@ pub fn cover(input_directory: String, files: Vec<String>, filter: FilterType) {
             #[rustfmt::skip]
             DynamicImage::resize_to_fill(&img, size, size, filter).save(output_file).unwrap();
 
-            return
+            return;
         }
     }
 }
