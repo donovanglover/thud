@@ -1,0 +1,4 @@
+# This config.toml is invalid and therefore won't be considered by thud.
+
+[[rules]]
+not_valid = true
