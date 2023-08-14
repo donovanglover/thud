@@ -19,7 +19,7 @@ _thud() {
 
     case "${cmd}" in
         thud)
-            opts="-s -i -o -h -V --size --input-directory --output-file --help --version"
+            opts="-s -i -o -v -h -V --size --input-directory --output-file --verbose --help --version"
             if [[ ${cur} == -* || ${COMP_CWORD} -eq 1 ]] ; then
                 COMPREPLY=( $(compgen -W "${opts}" -- "${cur}") )
                 return 0

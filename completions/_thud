@@ -21,6 +21,8 @@ _thud() {
 '--input-directory=[Directory to base the thumbnail off of]:INPUT_DIRECTORY:_files' \
 '-o+[Where to save the output image]:OUTPUT_FILE:_files' \
 '--output-file=[Where to save the output image]:OUTPUT_FILE:_files' \
+'-v[Print what thud is doing]' \
+'--verbose[Print what thud is doing]' \
 '-h[Print help (see more with '\''--help'\'')]' \
 '--help[Print help (see more with '\''--help'\'')]' \
 '-V[Print version]' \
