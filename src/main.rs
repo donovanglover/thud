@@ -3,9 +3,9 @@ use cli::Cli;
 use thud::get_home_config;
 use thud::get_filter;
 use thud::log;
-use thud::strategy;
 
 mod cli;
+mod strategy;
 
 fn main() {
     let Cli { input_directory, .. } = Cli::parse();
