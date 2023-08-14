@@ -2,6 +2,7 @@ use std::env::var;
 use std::fs;
 use std::path::Path;
 use serde::Deserialize;
+use image::imageops::FilterType;
 
 #[derive(Debug, Deserialize)]
 pub struct Config {
@@ -36,4 +37,15 @@ pub fn get_home_config() -> Option<Config> {
     }
 
     None
+}
+
+pub fn get_filter(filter: &str) -> FilterType {
+    match filter.to_lowercase().as_str() {
+        "nearest" => FilterType::Nearest,
+        "triangle" => FilterType::Triangle,
+        "catmullrom" => FilterType::CatmullRom,
+        "gaussian" => FilterType::Gaussian,
+        "lanczos3" => FilterType::Lanczos3,
+        &_ => FilterType::Lanczos3,
+    }
 }
