@@ -10,12 +10,12 @@ fn main() {
 
     if let Some(input_directory) = input_directory.to_str() {
         if let Ok(img) = image::open(input_directory.to_owned() + "/cover.png") {
-            DynamicImage::resize_to_fill(&img, size, size, FilterType::Nearest).save(output_file).unwrap();
+            DynamicImage::resize_to_fill(&img, size, size, FilterType::Lanczos3).save(output_file).unwrap();
             return
         }
 
         if let Ok(img) = image::open(input_directory.to_owned() + "/cover.jpg") {
-            DynamicImage::resize_to_fill(&img, size, size, FilterType::Nearest).save(output_file).unwrap();
+            DynamicImage::resize_to_fill(&img, size, size, FilterType::Lanczos3).save(output_file).unwrap();
             return
         }
     }
