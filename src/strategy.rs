@@ -4,6 +4,8 @@ use clap::Parser;
 use image::imageops::FilterType;
 use image::DynamicImage;
 
+/// The cover strategy looks for the first image in a list of potential files.
+/// If one is found, that image is used as the thumbnail of the directory.
 pub fn cover(input_directory: String, files: Vec<String>, filter: FilterType) {
     #[rustfmt::skip]
     let Cli { size, output_file, .. } = Cli::parse();
