@@ -5,6 +5,7 @@ use crate::cli::Cli;
 use crate::log;
 
 pub fn cover(input_directory: String, files: Vec<String>, filter: FilterType) {
+    #[rustfmt::skip]
     let Cli { size, output_file, .. } = Cli::parse();
 
     for file in files {
@@ -13,6 +14,7 @@ pub fn cover(input_directory: String, files: Vec<String>, filter: FilterType) {
         if let Ok(img) = image::open(&potential_image) {
             log(&("SUCCESS: Using ./".to_owned() + &file + " for " + &input_directory + "/"));
 
+            #[rustfmt::skip]
             DynamicImage::resize_to_fill(&img, size, size, filter).save(output_file).unwrap();
 
             return
