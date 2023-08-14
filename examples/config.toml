@@ -1,0 +1,20 @@
+# thud will use the first rule that matches `path`.
+# Because of this, you should place more specific rules *before* less specific rules.
+
+# This rule is like a catch-all since it matches everything in `/`.
+[[rules]]
+path = "/"
+strategy = "cover"
+files = [
+  "cover.jpg",
+  "cover.png"
+]
+
+# These rules never get called.
+[[rules]]
+path = "$HOME/icons"
+strategy = "icons"
+
+[[rules]]
+path = "~/thud"
+strategy = "ignore"
