@@ -24,7 +24,11 @@ Add [`thud`](https://search.nixos.org/packages?channel=unstable&query=thud) to y
 }
 ```
 
-That's it! Directories with `cover.jpg` or `cover.png` will now automatically generate cover images.
+### [Arch Linux](https://archlinux.org/)
+
+```fish
+git clone https://github.com/donovanglover/thud && cd thud && makepkg -si
+```
 
 ### Other distributions
 
