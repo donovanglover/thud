@@ -1,12 +1,16 @@
-use thud;
-
-// use std::env::var;
-use std::path::Path;
+use thud::get_config;
 
 #[test]
-fn get_config() {
-    // var("HOME").unwrap() + "/.config/thud/config.toml"
-    let file = Path::new("./examples/config.toml");
-    dbg!(thud::get_config(file));
-    assert_eq!(false, true, "get_config() returns a default config if none is present");
+fn get_config_returns_none_if_file_dne() {
+    assert!(get_config("this-file-does-not-exist.toml").is_none(), "get_config() returns None if the file does not exist");
+}
+
+#[test]
+fn get_config_returns_none_if_invalid_toml() {
+    assert!(get_config("./examples/invalid.toml").is_none(), "get_config() returns None if the file does not exist");
+}
+
+#[test]
+fn get_config_returns_config() {
+    dbg!(thud::get_config("./examples/config.toml").is_some(), "get_config() returns a config if the file exists and is valid");
 }
