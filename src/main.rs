@@ -16,7 +16,9 @@ fn main() {
 
             if let Some(rules) = config.rules {
                 for rule in rules {
-                    if input_directory.starts_with(rule.path) {
+                    if input_directory.starts_with(&rule.path) {
+                        log(&("Matched ".to_owned() + &input_directory_str + " with " + &rule.path));
+
                         if let Some(files) = rule.files {
                             let filter = rule.filter.unwrap_or("lanczos3".to_string());
 
