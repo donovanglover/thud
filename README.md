@@ -2,7 +2,7 @@
 
 *thud*, short for **thu**mbnail **d**irectory, is a tool that lets you generate directory thumbnails from images inside them. Useful for a Dolphin/KDE-like experience with GTK-based file browsers that don't show the contents of directories by default.
 
-thud can be customized with *rules* and *strategies* that reside in `~/.config/thud/config.toml`. By default, it creates thumbnails from `cover.{png,jpg}` files.
+thud can be customized with *rules* and *strategies* that reside in [`~/.config/thud/config.toml`](./examples/config.toml). By default, it creates thumbnails from `cover.{png,jpg}` files.
 
 ![Screenshot of thud changing folder icons to cover images in nautilus.](./cover.png)
 
