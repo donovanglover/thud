@@ -43,15 +43,17 @@ sudo install -Dm644 ./assets/thud.thumbnailer /usr/share/thumbnailers/thud.thumb
 ## Usage
 
 ```man
-Usage: thud [OPTIONS] --input-directory <INPUT_DIRECTORY> --output-file <OUTPUT_FILE>
+Usage: thud [OPTIONS] <INPUT_DIRECTORY> <OUTPUT_FILE>
+
+Arguments:
+  <INPUT_DIRECTORY>  Directory to thumbnail
+  <OUTPUT_FILE>      Where to save the output image
 
 Options:
-  -s, --size <SIZE>                        Size of the thumbnail to output [default: 128]
-  -i, --input-directory <INPUT_DIRECTORY>  Directory to base the thumbnail off of
-  -o, --output-file <OUTPUT_FILE>          Where to save the output image
-  -v, --verbose                            Print what thud is doing
-  -h, --help                               Print help (see more with '--help')
-  -V, --version                            Print version
+  -s, --size <INTEGER>  Thumbnail size [default: 128]
+  -v, --verbose         Print what thud is doing
+  -h, --help            Print help (see more with '--help')
+  -V, --version         Print version
 ```
 
 By default, directories with `cover.jpg` or `cover.png` will automatically generate cover images. You can customize this with `~/.config/thud/config.toml`.
