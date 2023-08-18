@@ -4,7 +4,7 @@
 .SH NAME
 thud \- Generate directory thumbnails from images inside them.
 .SH SYNOPSIS
-\fBthud\fR [\fB\-s\fR|\fB\-\-size\fR] <\fB\-i\fR|\fB\-\-input\-directory\fR> <\fB\-o\fR|\fB\-\-output\-file\fR> [\fB\-v\fR|\fB\-\-verbose\fR] [\fB\-h\fR|\fB\-\-help\fR] [\fB\-V\fR|\fB\-\-version\fR] 
+\fBthud\fR [\fB\-s\fR|\fB\-\-size\fR] [\fB\-v\fR|\fB\-\-verbose\fR] [\fB\-h\fR|\fB\-\-help\fR] [\fB\-V\fR|\fB\-\-version\fR] <\fIINPUT_DIRECTORY\fR> <\fIOUTPUT_FILE\fR> 
 .SH DESCRIPTION
 .PP
 thud is a thumbnailer that generates thumbnails for directories.
@@ -23,14 +23,8 @@ For a list of available strategies, see:
 https://github.com/donovanglover/thud/blob/master/src/strategy.rs
 .SH OPTIONS
 .TP
-\fB\-s\fR, \fB\-\-size\fR=\fISIZE\fR [default: 128]
-Size of the thumbnail to output
-.TP
-\fB\-i\fR, \fB\-\-input\-directory\fR=\fIINPUT_DIRECTORY\fR
-Directory to base the thumbnail off of
-.TP
-\fB\-o\fR, \fB\-\-output\-file\fR=\fIOUTPUT_FILE\fR
-Where to save the output image
+\fB\-s\fR, \fB\-\-size\fR=\fIINTEGER\fR [default: 128]
+Thumbnail size
 .TP
 \fB\-v\fR, \fB\-\-verbose\fR
 Print what thud is doing
@@ -40,6 +34,12 @@ Print help (see a summary with \*(Aq\-h\*(Aq)
 .TP
 \fB\-V\fR, \fB\-\-version\fR
 Print version
+.TP
+<\fIINPUT_DIRECTORY\fR>
+Directory to thumbnail
+.TP
+<\fIOUTPUT_FILE\fR>
+Where to save the output image
 .SH VERSION
 v0.2.0
 .SH AUTHORS
