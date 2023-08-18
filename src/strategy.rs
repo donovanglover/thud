@@ -17,7 +17,7 @@ pub fn cover(input_directory: String, files: Vec<String>, filter: FilterType) {
             log(&("SUCCESS: Using ./".to_owned() + &file + " for " + &input_directory + "/"));
 
             #[rustfmt::skip]
-            DynamicImage::resize_to_fill(&img, size, size, filter).save(output_file).unwrap();
+            DynamicImage::resize_to_fill(&img, u32::from(size), u32::from(size), filter).save(output_file).unwrap();
 
             return;
         }
