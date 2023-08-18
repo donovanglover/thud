@@ -26,11 +26,9 @@ pub struct Cli {
     pub size: u32,
 
     /// Directory to base the thumbnail off of
-    #[arg(short, long)]
     pub input_directory: PathBuf,
 
     /// Where to save the output image
-    #[arg(short, long)]
     pub output_file: PathBuf,
 
     /// Print what thud is doing
