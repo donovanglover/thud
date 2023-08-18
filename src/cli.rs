@@ -22,7 +22,7 @@ https://github.com/donovanglover/thud/blob/master/src/strategy.rs
 #[command(author, version, about, long_about = LONG_ABOUT)]
 pub struct Cli {
     /// Thumbnail size
-    #[arg(short, long, default_value_t = 128)]
+    #[arg(short, long, value_name = "INTEGER", default_value_t = 128)]
     pub size: u32,
 
     /// Directory to thumbnail
