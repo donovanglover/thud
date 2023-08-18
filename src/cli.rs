@@ -21,11 +21,11 @@ https://github.com/donovanglover/thud/blob/master/src/strategy.rs
 #[derive(Parser)]
 #[command(author, version, about, long_about = LONG_ABOUT)]
 pub struct Cli {
-    /// Size of the thumbnail to output
+    /// Thumbnail size
     #[arg(short, long, default_value_t = 128)]
     pub size: u32,
 
-    /// Directory to base the thumbnail off of
+    /// Directory to thumbnail
     pub input_directory: PathBuf,
 
     /// Where to save the output image
