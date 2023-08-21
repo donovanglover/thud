@@ -10,7 +10,7 @@ edition = "2021"
 [dependencies]
 clap = { version = "4.3.21", features = ["derive"] }
 image = "0.24.7"
-serde = { version = "1.0.183", features = ["derive"] }
+serde = { version = "1.0.185", features = ["derive"] }
 toml = "0.7.6"
 
 [build-dependencies]
