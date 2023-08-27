@@ -43,4 +43,4 @@ _thud() {
     esac
 }
 
-complete -F _thud -o bashdefault -o default thud
+complete -F _thud -o nosort -o bashdefault -o default thud
