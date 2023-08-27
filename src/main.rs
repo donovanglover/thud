@@ -7,6 +7,8 @@ use thud::log;
 mod cli;
 mod strategy;
 
+/// The main function is in charge of determining whether a given input directory has a specified
+/// rule. If so, it applies the strategy specified by that rule.
 fn main() {
     #[rustfmt::skip]
     let Cli { input_directory, .. } = Cli::parse();
