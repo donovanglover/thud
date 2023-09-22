@@ -1,6 +1,6 @@
 # Maintainer: Donovan Glover <https://donovan.is/>
 pkgname=thud
-pkgver=0.2.0
+pkgver=0.3.0
 pkgrel=1
 pkgdesc="Generate directory thumbnails for GTK-based file browsers from images inside them"
 arch=('any')
