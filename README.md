@@ -1,6 +1,6 @@
 # thud
 
-*thud*, short for **thu**mbnail **d**irectory, is a tool that lets you generate directory thumbnails from images inside them. Useful for a Dolphin/KDE-like experience with GTK-based file browsers that don't show the contents of directories by default.
+*thud*, short for **thu**mbnail **d**irectory, is a tool that lets you generate directory thumbnails from images inside them. Useful for a [Dolphin](https://apps.kde.org/dolphin/)/[KDE](https://kde.org/)-like experience with [GTK](https://www.gtk.org/)-based [file](https://apps.gnome.org/Nautilus/) [browsers](https://docs.xfce.org/xfce/thunar/start) that don't show the contents of directories by default.
 
 thud can be customized with *rules* and *strategies* that reside in [`~/.config/thud/config.toml`](./examples/config.toml). By default, it creates thumbnails from `cover.{png,jpg}` files.
 
