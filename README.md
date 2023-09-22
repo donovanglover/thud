@@ -58,7 +58,7 @@ Options:
   -V, --version         Print version
 ```
 
-By default, directories with `cover.jpg` or `cover.png` will automatically generate cover images. You can customize this with `~/.config/thud/config.toml`.
+By default, directories with `cover.jpg` or `cover.png` will automatically generate cover images. You can customize this with [`~/.config/thud/config.toml`](./examples/config.toml).
 
 ## Contributing
 
