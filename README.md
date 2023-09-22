@@ -62,4 +62,10 @@ By default, directories with `cover.jpg` or `cover.png` will automatically gener
 
 ## Contributing
 
-Anyone can add their own strategies to thud by forking the repository and making a pull request.
+Creating your own strategy for thud is easy for both new and experienced Rustaceans. Here are the steps:
+
+1. First add a new function to [`./src/strategy.rs`](./src/strategy.rs)
+2. Next add your strategy to `match rule.strategy.as_str()` in [`./src/main.rs`](./src/main.rs)
+3. Finally, make a pull request to let anyone be able to use your thumbnailing strategy.
+
+That's it! The possibilities are endless when it comes to how you want your directory thumbnails to look.
