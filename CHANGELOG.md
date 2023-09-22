@@ -12,8 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rust rewrite.
 - Has feature parity with 0.1.0.
 - Does not use libvips.
-- Thumbnail images are sharper.
 - Project renamed to `thud`
+- Ability to customize the image filter used by the thumbnail. The default `Lanczos3` is high quality.
 - Possible to specify which files to generate thumbnails from (and in what order) with `~/.config/thud/config.toml`.
 - Possible to configure thud with different *strategies* depending on a given *path*. So far, there is one strategy: cover.
 
