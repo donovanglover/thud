@@ -7,6 +7,47 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Breaking Changes
+
+#### `input-directory` and `output-file` are now arguments
+
+This makes it easier to tell that these values are required and follows other command line tools that deal with input/output.
+
+Before:
+
+```bash
+thud --size 256 --input-directory /path/to/directory --output-file thumbnail.png
+```
+
+After:
+
+```bash
+thud --size 256 /path/to/directory thumbnail.png
+```
+
+### New Features
+
+#### Environment variables supported in config file
+
+It is now possible to use `$HOME` and other environment variables at the start of a `path` in a rule.
+
+```toml
+[[rules]]
+path = "$HOME/Videos"
+strategy = "cover"
+files = [
+  "cover.webp"
+]
+```
+
+For convenience, `~` is also supported.
+
+```toml
+[[rules]]
+path = "~/Documents"
+strategy = "cover"
+```
+
 ## [0.2.0] - 2023-08-14
 
 - Rust rewrite.
