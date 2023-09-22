@@ -63,12 +63,14 @@ pub fn get_filter(filter: &str) -> FilterType {
     }
 }
 
-/// Lets users use $HOME and ~ at the beginning of paths
+/// Lets users use ~ and environment variables at the beginning of paths
 pub fn envify(path: &str) -> String {
     if path.starts_with('~') {
         path.replacen('~', &var("HOME").unwrap(), 1)
-    } else if path.starts_with("$HOME") {
-        path.replacen("$HOME", &var("HOME").unwrap(), 1)
+    } else if path.starts_with('$') {
+        let start = path.split('/').collect::<Vec<_>>()[0];
+
+        path.replacen(start, &var(start.replace("$", "")).unwrap(), 1)
     } else {
         path.to_string()
     }

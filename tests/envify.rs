@@ -17,3 +17,23 @@ fn envify_changes_home_to_environment_variable() {
         "envify() works for ~"
     );
 }
+
+#[test]
+fn envify_works_for_all_environment_variables() {
+    let pwd = var("PWD").unwrap();
+
+    assert_eq!(
+        envify("$PWD/Documents"),
+        format!("{pwd}/Documents"),
+        "envify() works for $PWD with /"
+    );
+}
+
+#[test]
+fn envify_works_for_environment_variable_by_itself() {
+    assert_eq!(
+        envify("$PWD"),
+        var("PWD").unwrap(),
+        "envify() works for $PWD by itself"
+    );
+}
