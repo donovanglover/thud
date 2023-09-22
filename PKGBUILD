@@ -2,7 +2,7 @@
 pkgname=thud
 pkgver=0.2.0
 pkgrel=1
-pkgdesc="Generate directory thumbnails from images inside them"
+pkgdesc="Generate directory thumbnails for GTK-based file browsers from images inside them"
 arch=('any')
 url="https://github.com/donovanglover/thud"
 license=('MIT')

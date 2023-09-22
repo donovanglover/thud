@@ -1,6 +1,6 @@
 [package]
 name = "thud"
-description = "Generate directory thumbnails from images inside them."
+description = "Generate directory thumbnails for GTK-based file browsers from images inside them."
 version = "0.2.0"
 authors = ["Copyright (C) 2022-2023 Donovan Glover <https://donovan.is/>"]
 repository = "https://github.com/donovanglover/thud"
