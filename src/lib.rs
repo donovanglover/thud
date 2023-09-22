@@ -63,6 +63,17 @@ pub fn get_filter(filter: &str) -> FilterType {
     }
 }
 
+/// Lets users use $HOME and ~ at the beginning of paths
+pub fn envify(path: &str) -> String {
+    if path.starts_with('~') {
+        path.replacen('~', &var("HOME").unwrap(), 1)
+    } else if path.starts_with("$HOME") {
+        path.replacen("$HOME", &var("HOME").unwrap(), 1)
+    } else {
+        path.to_string()
+    }
+}
+
 /// Helper log function when --verbose is used
 pub fn log(text: &str) {
     let Cli { verbose, .. } = Cli::parse();

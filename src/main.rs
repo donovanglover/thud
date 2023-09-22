@@ -1,5 +1,6 @@
 use clap::Parser;
 use cli::Cli;
+use thud::envify;
 use thud::get_filter;
 use thud::get_home_config;
 use thud::log;
@@ -21,9 +22,11 @@ fn main() {
 
             if let Some(rules) = config.rules {
                 for rule in rules {
-                    if input_directory.starts_with(&rule.path) {
+                    let path = envify(&rule.path);
+
+                    if input_directory.starts_with(path.as_str()) {
                         #[rustfmt::skip]
-                        log(&("RULES: Assigned ".to_owned() + input_directory_str + "/ to " + &rule.path));
+                        log(&("RULES: Assigned ".to_owned() + input_directory_str + "/ to " + path.as_str()));
 
                         let filter = rule.filter.unwrap_or("lanczos3".to_string());
                         let files = rule.files.unwrap_or(default_files);
