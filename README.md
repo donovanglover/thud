@@ -12,16 +12,14 @@ Tested and works in: [Caja](https://github.com/mate-desktop/caja), [Nemo](https:
 
 ### [NixOS](https://nixos.wiki/wiki/Overview_of_the_NixOS_Linux_distribution) (Recommended)
 
-> Note: [`thud`](https://github.com/NixOS/nixpkgs/pull/249224) has not been merged into nixpkgs yet, but [`go-thumbnailer`](https://github.com/donovanglover/thud/tree/0.1.0) still works! Make sure you're using nixos-unstable.
-
-Add [`go-thumbnailer`](https://search.nixos.org/packages?channel=unstable&query=go-thumbnailer) to your `systemPackages` and rebuild.
+Add [`thud`](https://search.nixos.org/packages?channel=unstable&query=thud) to your `systemPackages` and rebuild.
 
 ```nix
 { pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-    go-thumbnailer
+    thud
   ];
 }
 ```
