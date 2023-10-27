@@ -70,7 +70,7 @@ pub fn envify(path: &str) -> String {
     } else if path.starts_with('$') {
         let start = path.split('/').collect::<Vec<_>>()[0];
 
-        path.replacen(start, &var(start.replace("$", "")).unwrap(), 1)
+        path.replacen(start, &var(start.replace('$', "")).unwrap(), 1)
     } else {
         path.to_string()
     }
