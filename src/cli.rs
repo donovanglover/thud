@@ -1,3 +1,4 @@
+use clap::builder::styling::{AnsiColor, Effects, Styles};
 use clap::Parser;
 use std::path::PathBuf;
 
@@ -18,8 +19,16 @@ For a list of available strategies, see:
 https://github.com/donovanglover/thud/blob/master/src/strategy.rs
 ";
 
+fn styles() -> Styles {
+    Styles::styled()
+        .header(AnsiColor::Red.on_default() | Effects::BOLD)
+        .usage(AnsiColor::Red.on_default() | Effects::BOLD)
+        .literal(AnsiColor::Blue.on_default() | Effects::BOLD)
+        .placeholder(AnsiColor::Green.on_default())
+}
+
 #[derive(Parser)]
-#[command(author, version, about, long_about = LONG_ABOUT)]
+#[command(author, version, about, long_about = LONG_ABOUT, styles = styles())]
 pub struct Cli {
     /// Thumbnail size
     #[arg(short, long, value_name = "INTEGER", default_value_t = 128)]
