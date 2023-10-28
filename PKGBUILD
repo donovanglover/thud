@@ -23,10 +23,10 @@ package() {
   install -Dm755 "target/release/thud" "$pkgdir/usr/bin/thud"
   install -Dm644 "assets/thud.thumbnailer" "$pkgdir/usr/share/thumbnailers/thud.thumbnailer"
 
-  install -Dm644 "completions/_thud" "$pkgdir/usr/share/zsh/site-functions/_thud"
-  install -Dm644 "completions/thud.bash" "$pkgdir/usr/share/bash-completion/completions/thud"
-  install -Dm644 "completions/thud.fish" "$pkgdir/usr/share/fish/vendor_completions.d/thud.fish"
-  install -Dm644 "man/thud.1" "$pkgdir/usr/share/man/man1/thud.1"
+  install -Dm644 "target/completions/_thud" "$pkgdir/usr/share/zsh/site-functions/_thud"
+  install -Dm644 "target/completions/thud.bash" "$pkgdir/usr/share/bash-completion/completions/thud"
+  install -Dm644 "target/completions/thud.fish" "$pkgdir/usr/share/fish/vendor_completions.d/thud.fish"
+  install -Dm644 "target/man/thud.1" "$pkgdir/usr/share/man/man1/thud.1"
 
   install -Dm644 "README.md" "$pkgdir/usr/share/doc/$pkgname/README.md"
   install -Dm644 "LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
