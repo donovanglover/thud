@@ -27,7 +27,7 @@ Add [`thud`](https://search.nixos.org/packages?channel=unstable&query=thud) to y
 ### [Arch Linux](https://archlinux.org/)
 
 ```fish
-git clone https://github.com/donovanglover/thud -b 0.3.0 && cd thud && makepkg -si
+git clone https://github.com/donovanglover/thud -b 0.3.1 && cd thud && makepkg -si
 ```
 
 ### Other distributions

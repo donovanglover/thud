@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.1] - 2023-10-29
+
+### New Features
+
+- Added colors to `--help`. Optionally disable with `NO_COLOR=1`.
+
 ## [0.3.0] - 2023-09-21
 
 ### Breaking Changes
@@ -68,7 +74,8 @@ strategy = "cover"
 - Written in Go.
 - Binary is `go-thumbnailer`.
 
-[unreleased]: https://github.com/donovanglover/thud/compare/0.3.0...HEAD
+[unreleased]: https://github.com/donovanglover/thud/compare/0.3.1...HEAD
+[0.3.1]: https://github.com/donovanglover/thud/compare/0.3.0...0.3.1
 [0.3.0]: https://github.com/donovanglover/thud/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/donovanglover/thud/compare/0.1.0...0.2.0
 [0.1.0]: https://github.com/donovanglover/thud/releases/tag/1.0.0
