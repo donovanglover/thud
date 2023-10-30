@@ -78,4 +78,4 @@ strategy = "cover"
 [0.3.1]: https://github.com/donovanglover/thud/compare/0.3.0...0.3.1
 [0.3.0]: https://github.com/donovanglover/thud/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/donovanglover/thud/compare/0.1.0...0.2.0
-[0.1.0]: https://github.com/donovanglover/thud/releases/tag/1.0.0
+[0.1.0]: https://github.com/donovanglover/thud/releases/tag/0.1.0
