@@ -26,6 +26,8 @@ Add [`thud`](https://search.nixos.org/packages?channel=unstable&query=thud) to y
 
 ### [Arch Linux](https://archlinux.org/)
 
+I don't use Arch Linux anymore, but I wrote a PKGBUILD for the `pacman` enjoyers out there. Feel free to add it to the AUR.
+
 ```fish
 git clone https://github.com/donovanglover/thud -b 0.3.1 && cd thud && makepkg -si
 ```
