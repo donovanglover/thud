@@ -11,10 +11,10 @@ assignees: ''
 
 ## Environment
 
-File browser:
-Output of `uname -a`:
-Output of `thud -V`:
-Output of `cat ~/.config/thud/config.toml` (if you have one):
+- File browser:
+- Output of `uname -a`:
+- Output of `thud -V`:
+- Output of `cat ~/.config/thud/config.toml` (if you have one):
 
 ## Expected Behavior
 Tell us what should have happened.
