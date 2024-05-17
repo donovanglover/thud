@@ -10,7 +10,7 @@ Tested and works in: [Caja](https://github.com/mate-desktop/caja), [Nemo](https:
 
 ## Installation
 
-### [NixOS](https://nixos.wiki/wiki/Overview_of_the_NixOS_Linux_distribution) (Recommended)
+### [NixOS](https://wiki.nixos.org/wiki/Overview_of_the_NixOS_Linux_distribution) (Recommended)
 
 Add [`thud`](https://search.nixos.org/packages?channel=unstable&query=thud) to your `systemPackages` and rebuild.
 
