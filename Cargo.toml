@@ -11,7 +11,7 @@ edition = "2021"
 clap = { version = "4.4.7", features = ["derive"] }
 image = "0.25.5"
 serde = { version = "1.0.218", features = ["derive"] }
-toml = "0.8.8"
+toml = "0.8.20"
 
 [build-dependencies]
 clap = { version = "4.4.7", features = ["derive"] }
