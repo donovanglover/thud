@@ -15,7 +15,7 @@ toml = "0.8.20"
 
 [build-dependencies]
 clap = { version = "4.4.7", features = ["derive"] }
-clap_complete = "4.4.4"
+clap_complete = "4.5.3"
 clap_mangen = "0.2.26"
 
 [dev-dependencies]
